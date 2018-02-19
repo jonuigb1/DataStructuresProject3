@@ -24,9 +24,10 @@ public class Directory {
 
 		list = new ArrayList<String>();
 		FileChooser chooser = new FileChooser();
-		chooser.setFileSelectionMode(FileChooser.DIRECTORIES_ONLY);
-		chooser.setFileSelectionMode(FileChooser.FILES_ONLY);
-		chooser.setFileSelectionMode(FileChooser.FILES_AND_DIRECTORIES);
+		chooser.getInitialDirectory();
+		chooser.getInitialFileName();
+		chooser.getCurrentDirectory();
+		String fullPath = file.getCanonicalPath(); 
 		chooser.setAcceptAllFileFilterUsed(false);
 		int value = chooser.showOpenDialog(null);
 		if (value != FileChooser.APPROVE_OPTION) {
